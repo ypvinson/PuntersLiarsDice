@@ -13,6 +13,14 @@ export class AppComponent  {
   url4 = '';
   url5 = '';
 
+  lockDie(setDie){
+    switch (setDie){
+      case 1:
+         var dVal1Set = 1;
+         break;
+    }
+  }
+
   rollDie() {
     var dieVal1 = Math.ceil(Math.random()*6);
     var dieVal2 = Math.ceil(Math.random()*6);

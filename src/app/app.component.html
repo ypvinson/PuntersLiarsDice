@@ -1,30 +1,34 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Hit the Button Below to Roll
+Your dice are below the line and the Table sees what's above <br/>
+Hit Roll Dice to start the game
 </p>
-<br>
-
-
-<img [src]="url1" height="200"> <img [src]="url2" height="200"> <img [src]="url3" height="200"> <img [src]="url4" height="200"> <img [src]="url5" height="200"> <br/>
 <br/>
-<button (click)="lockDie(1)">
-  Lock
-</button>
-<button (click)="lockDie(2)">
-  Lock
-</button>
-<button (click)="lockDie(3)">
-  Lock
-</button>
-<button (click)="lockDie(4)">
-  Lock
-</button>
-<button (click)="lockDie(5)">
-  Lock
-</button>
 <br/>
+<img [src]="urlT1" height="200"> 
+<img [src]="urlT2" height="200"> 
+<img [src]="urlT3" height="200"> 
+<img [src]="urlT4" height="200"> 
+<img [src]="urlT5" height="200"> 
+<br/>
+<hr/>
+<button (click)="lockDie(1)"> {{d1Button}} </button>
+<button (click)="lockDie(2)"> {{d2Button}} </button>
+<button (click)="lockDie(3)"> {{d3Button}} </button>
+<button (click)="lockDie(4)"> {{d4Button}} </button>
+<button (click)="lockDie(5)"> {{d5Button}} </button>
 <br/>
 <br/>
 <button (click)="rollDie()">
-    Roll Die
+    Roll Dice
   </button>
+<button (click)="showLocked()"> Show Locked </button>
+<button> Pass Dice </button>
+<br/><br/>
+<button (click)="Liar()"> LIAR!!! </button>
+<br/><br/>
+<img [src]="url1" height="200"> 
+<img [src]="url2" height="200"> 
+<img [src]="url3" height="200"> 
+<img [src]="url4" height="200"> 
+<img [src]="url5" height="200"> 

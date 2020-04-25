@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Subject, BehaviorSubject, ReplaySubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'my-app',
@@ -7,30 +9,109 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'StackBlitz';
-  url1 = '';
-  url2 = '';
-  url3 = '';
-  url4 = '';
-  url5 = '';
+  url1 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  url2 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  url3 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  url4 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  url5 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  urlT1 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  urlT2 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  urlT3 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  urlT4 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  urlT5 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+  dVal1Set = false;
+  dVal2Set = false;
+  dVal3Set = false;
+  dVal4Set = false;
+  dVal5Set = false;
+
+  d1Button = 'Lock';
+  d2Button = 'Lock';
+  d3Button = 'Lock';
+  d4Button = 'Lock';
+  d5Button = 'Lock';
 
   lockDie(setDie){
     switch (setDie){
       case 1:
-         var dVal1Set = 1;
-         break;
+        this.dVal1Set = !this.dVal1Set;
+        if(this.dVal1Set) {
+          this.d1Button = 'Locked'
+        }
+        else {
+          this.d1Button = "Lock"
+        }
+        break;
+      case 2:
+        this.dVal2Set = !this.dVal2Set;
+        if(this.dVal2Set) {
+          this.d2Button = 'Locked'
+        }
+        else {
+          this.d2Button = "Lock"
+        }
+        break;
+      case 3:
+        this.dVal3Set = !this.dVal3Set;
+        if(this.dVal3Set) {
+          this.d3Button = 'Locked'
+        }
+        else {
+          this.d3Button = "Lock"
+        }
+        break;
+      case 4:
+        this.dVal4Set = !this.dVal4Set;
+        if(this.dVal4Set) {
+          this.d4Button = 'Locked'
+        }
+        else {
+          this.d4Button = "Lock"
+        }
+        break;
+      case 5:
+        this.dVal5Set = !this.dVal5Set;
+        if(this.dVal5Set) {
+          this.d5Button = 'Locked'
+        }
+        else {
+          this.d5Button = "Lock"
+        }
+        break;
     }
   }
 
   rollDie() {
-    var dieVal1 = Math.ceil(Math.random()*6);
-    var dieVal2 = Math.ceil(Math.random()*6);
-    var dieVal3 = Math.ceil(Math.random()*6);
-    var dieVal4 = Math.ceil(Math.random()*6);
-    var dieVal5 = Math.ceil(Math.random()*6);
-
+    if(this.dVal1Set) {
+    }
+    else {
+      var dieVal1 = Math.ceil(Math.random()*6);
+    }
+    if(this.dVal2Set) {
+    }
+    else {
+      var dieVal2 = Math.ceil(Math.random()*6);
+    }
+    if(this.dVal3Set) {
+    }
+    else {
+      var dieVal3 = Math.ceil(Math.random()*6);
+    }
+    if(this.dVal4Set) {
+    }
+    else {
+      var dieVal4 = Math.ceil(Math.random()*6);
+    }
+    if(this.dVal5Set) {
+    }
+    else {
+      var dieVal5 = Math.ceil(Math.random()*6);
+    }
     switch (dieVal1) {
     case 1:
         this.url1 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        this.dVal1Set = true;
+        this.d1Button = 'Locked'
         break;
     case 2:
         this.url1 = 'https://i.ibb.co/8D6HgqL/Black2s.png';
@@ -51,6 +132,8 @@ export class AppComponent  {
     switch (dieVal2) {
     case 1:
         this.url2 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        this.dVal2Set = true;
+        this.d2Button = 'Locked'
         break;
     case 2:
         this.url2 = 'https://i.ibb.co/8D6HgqL/Black2s.png';
@@ -71,6 +154,8 @@ export class AppComponent  {
     switch (dieVal3) {
     case 1:
         this.url3 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        this.dVal3Set = true;
+        this.d3Button = 'Locked'
         break;
     case 2:
         this.url3 = 'https://i.ibb.co/8D6HgqL/Black2s.png';
@@ -91,6 +176,8 @@ export class AppComponent  {
     switch (dieVal4) {
     case 1:
         this.url4 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        this.dVal4Set = true;
+        this.d4Button = 'Locked'
         break;
     case 2:
         this.url4 = 'https://i.ibb.co/8D6HgqL/Black2s.png';
@@ -111,6 +198,8 @@ export class AppComponent  {
     switch (dieVal5) {
     case 1:
         this.url5 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        this.dVal5Set = true;
+        this.d5Button = 'Locked'
         break;
     case 2:
         this.url5 = 'https://i.ibb.co/8D6HgqL/Black2s.png';
@@ -128,5 +217,29 @@ export class AppComponent  {
         this.url5 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
         break; 
     }
+  }
+  showLocked() {
+        if(this.dVal1Set) {
+          this.urlT1 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        }
+        if(this.dVal2Set) {
+          this.urlT2 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        }
+        if(this.dVal3Set) {
+          this.urlT3 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        }
+        if(this.dVal4Set) {
+          this.urlT4 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        }
+        if(this.dVal5Set) {
+          this.urlT5 = 'https://i.ibb.co/pfwq5mV/Black1s.png';
+        }
+  }
+  Liar() {
+        this.urlT1 = this.url1;
+        this.urlT2 = this.url2;
+        this.urlT3 = this.url3;
+        this.urlT4 = this.url4;
+        this.urlT5 = this.url4;
   }
 }

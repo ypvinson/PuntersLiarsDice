@@ -24,12 +24,14 @@ export class AppComponent  {
   dVal3Set = false;
   dVal4Set = false;
   dVal5Set = false;
+  gameState = false;
 
   d1Button = 'Lock';
   d2Button = 'Lock';
   d3Button = 'Lock';
   d4Button = 'Lock';
   d5Button = 'Lock';
+  liarButton = 'LIAR!!!'
 
   lockDie(setDie){
     switch (setDie){
@@ -39,7 +41,7 @@ export class AppComponent  {
           this.d1Button = 'Locked'
         }
         else {
-          this.d1Button = "Lock"
+          this.d1Button = 'Lock'
         }
         break;
       case 2:
@@ -48,7 +50,7 @@ export class AppComponent  {
           this.d2Button = 'Locked'
         }
         else {
-          this.d2Button = "Lock"
+          this.d2Button = 'Lock'
         }
         break;
       case 3:
@@ -57,7 +59,7 @@ export class AppComponent  {
           this.d3Button = 'Locked'
         }
         else {
-          this.d3Button = "Lock"
+          this.d3Button = 'Lock'
         }
         break;
       case 4:
@@ -66,7 +68,7 @@ export class AppComponent  {
           this.d4Button = 'Locked'
         }
         else {
-          this.d4Button = "Lock"
+          this.d4Button = 'Lock'
         }
         break;
       case 5:
@@ -75,7 +77,7 @@ export class AppComponent  {
           this.d5Button = 'Locked'
         }
         else {
-          this.d5Button = "Lock"
+          this.d5Button = 'Lock'
         }
         break;
     }
@@ -236,10 +238,38 @@ export class AppComponent  {
         }
   }
   Liar() {
-        this.urlT1 = this.url1;
-        this.urlT2 = this.url2;
-        this.urlT3 = this.url3;
-        this.urlT4 = this.url4;
-        this.urlT5 = this.url5;
+    this.gameState = !this.gameState;
+    if(this.gameState) {
+      this.liarButton = 'Reset'
+      this.urlT1 = this.url1;
+      this.urlT2 = this.url2;
+      this.urlT3 = this.url3;
+      this.urlT4 = this.url4;
+      this.urlT5 = this.url5;
+    }
+    else {
+      this.liarButton = 'LIAR!!!'
+      this.url1 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.url2 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.url3 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.url4 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.url5 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.urlT1 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.urlT2 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.urlT3 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.urlT4 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.urlT5 = 'https://i.ibb.co/bF4CF08/Blacks.png';
+      this.dVal1Set = false;
+      this.dVal2Set = false;
+      this.dVal3Set = false;
+      this.dVal4Set = false;
+      this.dVal5Set = false;
+      this.d1Button = 'Lock';
+      this.d2Button = 'Lock';
+      this.d3Button = 'Lock';
+      this.d4Button = 'Lock';
+      this.d5Button = 'Lock';
+    }
+  
   }
 }

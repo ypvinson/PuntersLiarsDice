@@ -240,6 +240,6 @@ export class AppComponent  {
         this.urlT2 = this.url2;
         this.urlT3 = this.url3;
         this.urlT4 = this.url4;
-        this.urlT5 = this.url4;
+        this.urlT5 = this.url5;
   }
 }

@@ -130,6 +130,7 @@ export class AppComponent  {
     case 6:
         this.url1 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
         break; 
+    //default: this.url1= 'https://i.ibb.co/bF4CF08/Blacks.png';
     }
     switch (dieVal2) {
     case 1:
@@ -152,6 +153,7 @@ export class AppComponent  {
     case 6:
         this.url2 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
         break; 
+    //default: this.url2= 'https://i.ibb.co/bF4CF08/Blacks.png';
     }
     switch (dieVal3) {
     case 1:
@@ -174,6 +176,7 @@ export class AppComponent  {
     case 6:
         this.url3 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
         break; 
+    //default: this.url3= 'https://i.ibb.co/bF4CF08/Blacks.png';
     }
     switch (dieVal4) {
     case 1:
@@ -196,6 +199,7 @@ export class AppComponent  {
     case 6:
         this.url4 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
         break; 
+    //default: this.url4= 'https://i.ibb.co/bF4CF08/Blacks.png';
     }
     switch (dieVal5) {
     case 1:
@@ -217,7 +221,8 @@ export class AppComponent  {
         break;
     case 6:
         this.url5 = 'https://i.ibb.co/mJ4BTph/Black6s.png';
-        break; 
+        break;
+    //default: this.url5= 'https://i.ibb.co/bF4CF08/Blacks.png'; 
     }
   }
   showLocked() {
